@@ -7,8 +7,8 @@ test('ShadowDom Example', async ({ page }) => {
     console.log(await page.locator('div.target2').textContent());
     console.log(await page.locator('div.target3').textContent());
     console.log(await page.locator('div.target1').first().textContent());
-    console.log(await page.locator('div.target1').nth(1).textContent());
-    console.log(await page.locator('div.target1').last().textContent());  //nth(2)
+    console.log(await page.locator('div.target1').nth(1).textContent()); // we can give the index withnth(2)
+    console.log(await page.locator('div.target1').last().textContent()); 
     console.log(await page.locator('div.target1').count());
 
     console.log(await page.locator(':light(div.target1)').textContent());

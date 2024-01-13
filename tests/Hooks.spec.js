@@ -29,7 +29,7 @@ test('Search Hotel Page', async ({ page }) => {
  
 test.afterEach('After Each', async ({ page }) => {
     console.log('Finished ${testInfo.title} with Status ${testInfo.status}');
-})
+}) // above decleration will give the boolean status for each test and verify the title.
  
 test.afterAll('After All', async ({ browser }) => {
     await browser.close();

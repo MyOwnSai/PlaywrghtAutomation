@@ -1,0 +1,3 @@
+First Need to install the csv package, the code below (should enter in terminal).
+
+   npm install path fs csv-parse

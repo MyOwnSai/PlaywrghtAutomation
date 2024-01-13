@@ -1,0 +1,4 @@
+To Acces The enviroment file datas , first we need to install the mentioned package below.
+  npm install dotenv 
+
+then we have to create a new file called ".env" with datas and using data variables we can access from scripts.

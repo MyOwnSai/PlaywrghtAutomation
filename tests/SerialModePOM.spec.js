@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const { LoginPage } = require('../Pages/loginPage');
 const { launchURL1 } = require('../Pages/launchURL1');
-const {selector_Class} = require('../Pages/selectClass');
+const { selector_Class } = require('../Pages/selectClass');
 
 test.describe.configure({ mode: 'serial' });
 
@@ -17,10 +17,6 @@ test('launch Addactin url', async () => {
     // Page Url
     const lp1 = new launchURL1(page);
     await lp1.goToURL();
-
-    // await page.goto('https://adactinhotelapp.com/');
-    // console.log("Url is launched");
-    // await expect(page).toHaveURL('https://adactinhotelapp.com/');
 
 })
 
@@ -42,9 +38,6 @@ test('login page', async () => {
 
         const lp = new LoginPage(page);
         await lp.userNM(name);
-
-        // await page.locator('//input[@id="username"]').fill('saiGoutham123');
-        //console.log("Entered Username :  " +(await page.locator('//input[@id="username"]')).getAttribute("value"))
         await page.locator('//input[@id="password"]').fill('Jawa@123');
         await page.getByRole('button', { name: 'login' }).click();
         console.log("Successfully login");
@@ -60,13 +53,9 @@ test('login page', async () => {
 test('search hotel', async () => {
     await expect(page).toHaveURL('https://adactinhotelapp.com/SearchHotel.php');
     await expect(page).toHaveTitle('Adactin.com - Search Hotel');
-    const locatOption=2;
+    const locatOption = 2;
     const lp1 = new selector_Class(page);
     await lp1.hotel_Location(locatOption);
-
-
-    // const dropdown_location = await page.locator('//select[@id="location"]').selectOption('Sydney');
-    // console.log('The selected Location Option is : ' + dropdown_location);
 
     const dropdown_hotel = await page.locator('//select[@name="hotels"]').selectOption('Hotel Creek');
     console.log('The selected hotel Option is : ' + dropdown_hotel);

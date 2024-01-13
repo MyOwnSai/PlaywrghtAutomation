@@ -1,0 +1,10 @@
+// Followe the step below to generate the allure report 
+// Note : before generat the allure report specific test should have pass then only we can use below commands.
+
+//npm install allure-playwright --save-dev 
+//npm install allure-commandline --save -dev
+// npx playwright test ParameterizationUsingArray.spec.js --headed --project=chromium --reporter=line,allure-playwright
+//npx allure generate ./allure-results
+//npx allure open ./allure-report
+
+// now you can see the report in project itself.
